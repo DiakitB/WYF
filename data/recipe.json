@@ -1,0 +1,30 @@
+{
+  "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_34fc0e33146d4ee9ef6d6e10091d9c95",
+  "label": "Cuban Pork Shoulder with Beans and Rice",
+  "image": "https://edamam-product-images.s3.amazonaws.com/web-img/22f/22f5346471f5861a90795fc5706eafb9?X-Amz-Security-Token=IQoJb3JpZ2luX2VjELX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIEDZg0FTJ0H%2BuSENC4TKNUtJhS%2FhoT0TlBYB2p1SqjaQAiBtRkub2QUA1YFnO4ozYfv1NQyHT%2Fog3sI92x1A3JGgDirCBQie%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMiS6iYUrQlhKWmuOCKpYFDpuVhmQ5Ll9h4YCos4iJc1QaLMfz5yp0XSZyeiB85KHhf5ukXT%2BL7utbGe1uwvIx8cPuPLE9pCq8oajuNu4ooarclllLQo%2Fmna35AAWRNNyINSXANWerKv5OTWxEIg6vemOQfQ79WGKBWrb%2BMgsEbzI6RFFnRNMWE%2BLazhgo54BU5%2FyInV4FZCN9Xm4bFXmbOyIIbsmjuWqgF1jZKwkrMbjYKT%2F14%2BYEaAwsMraWZtcDBSQ0KWwuMEmYEz4MI4Lz8dKbZHDIx3U4UqdYX%2BilCmURIyes6f2oNWT7crZx1fs%2F4wlg4JU57IffL2ozJ%2F5d4EiSwzHd%2F7hSRt3t1ldWmB%2BmwGHsYc0iQoIp%2BNcPEMYfad0kjN8wSwwatlNHDA0YNWOSv0B22%2BkzSSgQmyjLQwVUaEaLeDqOilPN5XGpobUYwaZAAhdHvCtVYuBdO9gbX%2FYeBLHfWY2sFRoKF5DKEwonsRqG0e6XK1RkEy5z5SHM%2B0qF8mQ6FeYHCEUaLcXTAB8%2FlXX3qI3KTQAYQw6to98eZMq90SFRIJhr2f0TeRn%2Bji5LGOOa3IbJ7hGBAwuFdjxUIKFYzwGM8qOIUBFj%2FsCNYZNGkzgBMtq8Jz7LrhSK4NaqT6Hljuo3L%2BdXQ9VyThmCW%2BQMwQci8UvDRj0QtSY2qp4ZhKml0PWcbuE28oPgu%2BldmBzDp0ku%2BeLUXEs43eagYM%2BUvTzSd9sMKzxSdIPbkwEeA5RWclnojDCx4LuLiystjonIDwwgmBlSDoGHjv9kQGSQCIxzGZg0KhHsOvOIyHXQNtTBW%2BFxJF8XRYpDQLzUBJhbFp3IdqDqOgNg46EDf6bPNYvtkpE%2B4ZOmmoemlRsj3MCjEZkl2wFFz6jKwwHJQB0w8e62tQY6sgEtgLkmX5Hd9kfjpkHXe4p4JG82VN3ym5EoQqB7YD%2F%2FJsFQ6L%2BkCqzSE84cc5eqoF6gT4tfbpSNu5JAcXS3DKa%2BGHtimPyXbC5svo4DX35cqG2qIX%2FIe7%2FxOuqcbn6r82ser64zzvd5JYf6T8YTEK9Im7bNA1IsknsHv8NumM6c5LhimTfRVYvvLTd44zCkzr76PwwXhwjM7BRK%2BCOSw8SZMom1%2FJDRGmkG%2BYFIZQYEYS8R&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240803T053442Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFCTOCVOFY%2F20240803%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d17d8eaf7f4b4399498b01b5762714ca8769bb6dc70cc27d4fdde906c2626b01",
+  "source": "My Recipes",
+  "yield": 8.0,
+  "ingredientLines": [
+    "2 ¾ cups unsalted chicken stock (such as Swanson)",
+    "1 cup fresh orange juice (about 4 oranges)",
+    "½ cup chopped cilantro stems",
+    "1 medium orange, quartered",
+    "1 ¾ teaspoons kosher salt, divided",
+    "1 ½ teaspoons freshly ground black pepper, divided",
+    "4 center-cut bacon slices, chopped",
+    "1 (2 1/2-pound) bone-in pork shoulder, trimmed",
+    "1 pound dried black beans",
+    "2 ¼ cups chopped onion, divided",
+    "10 garlic cloves, crushed and divided",
+    "¼ cup chopped fresh oregano, divided",
+    "2 teaspoons paprika",
+    "2 teaspoons ground cumin",
+    "1 ½ teaspoons crushed red pepper",
+    "1 bay leaf",
+    "1 ½ cups chopped tomato",
+    "1 jalapeño pepper, seeded and thinly sliced",
+    "2 ⅔ cups hot cooked white rice",
+    "¼ cup chopped fresh cilantro"
+  ],
+  "calories": 5248.741718948388
+}
