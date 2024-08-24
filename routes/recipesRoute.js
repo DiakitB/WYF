@@ -7,8 +7,8 @@ router
   .post(recipesController.createRecipe);
 router
   .route("/:id")
-  .get(recipesController.checkId, recipesController.getRecipe)
-  .patch(recipesController.checkId, recipesController.updateRecipe)
-  .delete(recipesController.checkId, recipesController.deleteRecipe);
+  .get(recipesController.getRecipe)
+  .patch(recipesController.updateRecipe)
+  .delete(recipesController.deleteRecipe);
 
 module.exports = router;

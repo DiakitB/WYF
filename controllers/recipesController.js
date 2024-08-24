@@ -1,99 +1,95 @@
-const fs = require("fs");
-const data = fs.readFileSync(`${__dirname}/../data/data.json`, "utf-8");
-const recipes = JSON.parse(data);
+// const fs = require("fs");
+// const data = fs.readFileSync(`${__dirname}/../data/data.json`, "utf-8");
+// const recipes = JSON.parse(data);
+const Recipe = require("../models/recipeModel");
 
 //middleware stack
-exports.checkId = (req, res, next) => {
-  const id = req.params.id * 1;
-  if (!id) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Invalid ID",
-    });
-  }
-  next();
-};
 
 // console.log(recipes);
-exports.getAllRecipes = (req, res) => {
-  res.status(200).json({
-    status: "success",
-    results: recipes.length,
-    data: {
-      recipes,
-    },
-  });
-};
-
-exports.createRecipe = (req, res) => {
-  const newId = recipes[recipes.length - 1].id + 1;
-  const newRecipe = Object.assign({ id: newId }, req.body);
-  recipes.push(newRecipe);
-  fs.writeFile(
-    `${__dirname}/data/data.json`,
-    JSON.stringify(recipes),
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          recipe: newRecipe,
-        },
-      });
-    }
-  );
-};
-
-exports.getRecipe = (req, res) => {
-  const id = req.params.id * 1;
-  const recipe = recipes.find((el) => el.id === id);
-
-  if (!recipe) {
-    return res.status(404).json({
+exports.getAllRecipes = async (req, res) => {
+  try {
+    const data = await Recipe.find(req.query);
+    res.status(200).json({
+      status: "success",
+      results: data.length,
+      data: {
+        recipes: data,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
       status: "fail",
-      message: "Invalid ID",
+      message: err,
     });
   }
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      recipe,
-    },
-  });
 };
 
-exports.updateRecipe = (req, res) => {
-  const id = req.params.id * 1;
-  const recipe = recipes.find((el) => el.id === id);
-
-  if (!recipe) {
-    return res.status(404).json({
+exports.createRecipe = async (req, res) => {
+  try {
+    const data = await Recipe.create(req.body);
+    res.status(201).json({
+      status: "success",
+      data: {
+        recipe: req.body,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
       status: "fail",
-      message: "Invalid ID",
+      message: err,
     });
   }
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      recipe: "<Updated recipe here...>",
-    },
-  });
 };
 
-exports.deleteRecipe = (req, res) => {
-  const id = req.params.id * 1;
-  const recipe = recipes.find((el) => el.id === id);
-
-  if (!recipe) {
-    return res.status(404).json({
+exports.getRecipe = async (req, res) => {
+  try {
+    const data = await Recipe.findById(req.params.id);
+    res.status(200).json({
+      status: "success",
+      data: {
+        recipe: data,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
       status: "fail",
-      message: "Invalid ID",
+      message: err,
     });
   }
+};
 
-  res.status(204).json({
-    status: "success",
-    data: null,
-  });
+exports.updateRecipe = async (req, res) => {
+  try {
+    const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    res.status(200).json({
+      status: "success",
+      data: {
+        recipe,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
+
+exports.deleteRecipe = async (req, res) => {
+  try {
+    await Recipe.findByIdAndDelete(req.params.id);
+    res.status(204).json({
+      status: "success",
+      message: "Recipe deleted",
+      data: null,
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };

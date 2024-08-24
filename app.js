@@ -5,9 +5,8 @@ const usersRouter = require("././routes/usersRoute");
 const morgon = require("morgan");
 const app = express();
 
-if (process.env.NODE_ENV === "development") {
-  app.use(morgon("dev"));
-}
+app.use(morgon("dev"));
+
 app.use(express.json());
 
 // const getAllRecipes = (req, res) => {
