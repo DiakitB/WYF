@@ -1,27 +1,19 @@
 const mongoose = require("mongoose");
 
 const recipeSchema = new mongoose.Schema({
-  url: {
+  name: {
     type: String,
-  },
-  label: {
-    type: String,
-    required: [true, "A recipe must have a label"],
-    unique: true,
+    required: [true, "A recipe must have a name"],
+    // unique: true,
   },
   image: {
     type: String,
-    // required: [true, "A recipe must have a picture"],
+    required: [true, "A recipe must have an image"],
   },
-  source: {
+  ingredients: Array,
+  category: {
     type: String,
-  },
-  yield: {
-    type: Number,
-  },
-  ingredientLines: [],
-  calories: {
-    type: Number,
+    required: [true, "A recipe must have a category"],
   },
 });
 

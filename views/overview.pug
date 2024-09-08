@@ -1,0 +1,24 @@
+
+extends base
+
+
+
+block content 
+ 
+  .main 
+   each recipe in recipes
+    .imageBox 
+      .second.hero 
+        img.hero-profile-img(src=`${recipe.image}`, alt="")
+        .hero-description-bk 
+        .hero-logo 
+          img(src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg", alt="")
+        .hero-description 
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .hero-date 
+          p=recipe.name
+        .hero-btn 
+          a(href="#") Learn More
+
+
+          
